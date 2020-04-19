@@ -1,22 +1,22 @@
 import React from 'react';
 import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
-import articles from './components/articles'
+import Articles from './components/articles'
 import LoginForm from './components/loginForm'
 
 
 class App extends React.Component {
 
   state = {
-    loggedIn:true
+    loggedIn:false
   }
 
   renderContent = () => {
     switch (this.state.loggedIn) {
-      case true:
+      case false:
         return <LoginForm/>
     
       default:
-        return <articles/>
+        return <Articles/>
     }
   }
 

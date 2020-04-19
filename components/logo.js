@@ -1,23 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-class logo extends React.Component {
+class Logo extends React.Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text>Open up logo.js to start working on your logo!</Text>
+            <View>
+                <Image source={{uri:'https://uilogos.co/img/logotype/circle.png'}} style= {{height:150,width:150}}/>
             </View>
         )
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
-
-export default logo;
+export default Logo;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
 
-class articles extends React.Component {
+class Articles extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default articles;
+export default Articles;

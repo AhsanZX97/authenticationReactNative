@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
 
-class emailAndPassword extends React.Component {
+class EmailAndPassword extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -14,10 +14,8 @@ class emailAndPassword extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'center'
     },
 });
 
-export default emailAndPassword;
+export default EmailAndPassword;

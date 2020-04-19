@@ -1,11 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Logo from './logo'
+import EmailAndPassword from './emailAndPassword'
 
 class LoginForm extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Open up loginForm.js to start working on your loginForm!</Text>
+                <View style = {styles.logoContainer}>
+                    <Logo/>
+                </View>
+                <View style = {styles.emailAndPassword}>
+                    <EmailAndPassword/>
+                </View>
             </View>
         )
     }
@@ -14,10 +21,18 @@ class LoginForm extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
         justifyContent: 'center',
     },
+
+    logoContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+
+    emailAndPassword: {
+        flex: 2
+    }
 });
 
 export default LoginForm;
