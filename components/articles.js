@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ClippingRectangle, TouchableOpacity } from 'react-native';
+import * as firebase from 'firebase';
 
 class Articles extends React.Component {
     render() {
@@ -12,7 +13,7 @@ class Articles extends React.Component {
                     <Text style={styles.content}>
                         You are logged in from firebase
                     </Text>
-                    <TouchableOpacity style={{padding:20}}>
+                    <TouchableOpacity style={{padding:20}} onPress={() => firebase.auth().signOut()}>
                         <Text style={{color:'#1B9CFC'}}>LogOut</Text>
                     </TouchableOpacity>
                 </View>

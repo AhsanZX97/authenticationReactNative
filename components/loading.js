@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
 
-class loading extends React.Component {
+class Loading extends React.Component {
     render() {
         return (
             <View style={styles.container}>
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default loading;
+export default Loading;

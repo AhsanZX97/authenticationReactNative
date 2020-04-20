@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import * as firebase from 'firebase';
 
 class EmailAndPassword extends React.Component {
 
@@ -7,6 +8,18 @@ class EmailAndPassword extends React.Component {
         email: '',
         password: '',
         error: ''
+    }
+
+    onBottomPress = () => {
+        firebase.auth().signInWithEmailAndPassword(this.state.email,this.state.password)
+        .then(this.onLoginSuccess)
+    }
+
+    onLoginSuccess = () => {
+        this.setState({
+            error: '',
+            loading:false
+        })
     }
 
     render() {
@@ -20,7 +33,7 @@ class EmailAndPassword extends React.Component {
                     value={this.state.password}
                     onChangeText={password => this.setState({ password })} />
 
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity style={styles.buttonContainer} onPress={this.onBottomPress}>
                     <Text style={styles.buttonText}>Login</Text>
 
                 </TouchableOpacity>
