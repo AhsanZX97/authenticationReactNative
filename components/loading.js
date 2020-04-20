@@ -1,11 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 
 class Loading extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>Open up loading.js to start working on your loading!</Text>
+                <ActivityIndicator size = "large"/>
             </View>
         )
     }

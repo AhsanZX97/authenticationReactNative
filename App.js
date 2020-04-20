@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ClippingRectangle } from 'react-native';
 import Articles from './components/articles'
 import LoginForm from './components/loginForm'
 import * as firebase from 'firebase';
-import Loading from '/components/loading'
+import Loading from './components/loading'
 import api from './variables'
 
 
@@ -15,7 +15,7 @@ class App extends React.Component {
 
   componentDidMount() {
     var firebaseConfig = {
-      apiKey: "AIzaSyDjP9p7In1Bdf5Q06a5R8jl1mq47xMFyFI",
+      apiKey: api,
       authDomain: "tutlogin-57054.firebaseapp.com",
       databaseURL: "https://tutlogin-57054.firebaseio.com",
       projectId: "tutlogin-57054",

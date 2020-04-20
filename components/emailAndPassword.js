@@ -13,6 +13,11 @@ class EmailAndPassword extends React.Component {
     onBottomPress = () => {
         firebase.auth().signInWithEmailAndPassword(this.state.email,this.state.password)
         .then(this.onLoginSuccess)
+        .catch(err => {
+            this.setState({
+                error:err.message
+            })
+        })
     }
 
     onLoginSuccess = () => {
